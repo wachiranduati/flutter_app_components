@@ -12,6 +12,8 @@ class HomeApp extends StatelessWidget {
         backgroundColor: Colors.white,
         body: SafeArea(
           child: Column( // column works just as a row except the orientation is in a differnt direction
+            crossAxisAlignment: CrossAxisAlignment.stretch,// use this property to tweak horizontal properties for the children
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,// use this to tweak children properties verticallyfor the children
             children: <Widget>[
               Container(
                 height: 100,
