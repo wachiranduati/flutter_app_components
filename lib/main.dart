@@ -8,14 +8,12 @@ class HomeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(// always begin with a material app
-      home: Scaffold( // second should always be the scaffold
-        appBar: AppBar(
-          title: Text('Flutter App'),//note the use of single quotation marks
+      home: Scaffold(// scaffold is really important ...else you get some conspicuous red yellow squiglly lines
+        backgroundColor: Colors.white,
+        body: Container(
+          child: Text('Flutter app'), // a text widget to show text on the app...note that the text is placed under the status bar
         ),
-        body: Container(// container added to the app...it takes up all the available space in an app
-          color: Colors.teal,
-        ),
-      ),
+      )
     );
   }
 }
