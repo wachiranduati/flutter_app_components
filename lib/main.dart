@@ -10,8 +10,10 @@ class HomeApp extends StatelessWidget {
     return MaterialApp(// always begin with a material app
       home: Scaffold(// scaffold is really important ...else you get some conspicuous red yellow squiglly lines
         backgroundColor: Colors.white,
-        body: Container(
-          child: Text('Flutter app'), // a text widget to show text on the app...note that the text is placed under the status bar
+        body: SafeArea( //introduce a safe area wrapped around the container to remove content from above the appbar
+          child: Container(
+            child: Text('Flutter app'), // a text widget to show text on the app...note that the text is placed under the status bar
+          ),
         ),
       )
     );
