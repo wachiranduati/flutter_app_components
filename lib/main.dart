@@ -11,8 +11,8 @@ class HomeApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.white,
         body: SafeArea(
-          child: Row( // note that a container can only hold a single item...a single child
-            children: <Widget>[// comes the Row widget...takes a multitude of children widgets
+          child: Column( // column works just as a row except the orientation is in a differnt direction
+            children: <Widget>[
               Container(
                 height: 100,
                 width: 100,
