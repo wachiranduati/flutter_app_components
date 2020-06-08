@@ -9,28 +9,24 @@ class HomeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.white,
-        body: SafeArea(
-          child: Column( // column works just as a row except the orientation is in a differnt direction
-            crossAxisAlignment: CrossAxisAlignment.stretch,// use this property to tweak horizontal properties for the children
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,// use this to tweak children properties verticallyfor the children
+        body: SafeArea(// navigate to the lib folder in ...> flutter_app_components/lib/products.dart
+          child: Column(
             children: <Widget>[
               Container(
                 height: 100,
                 width: 100,
-                color: Colors.teal,//note the colour used is from the material theme
+                color: Colors.teal,
               ),
               Container(
                 height: 100,
                 width: 100,
-                color: Colors.red.shade300,// to the material colors you can also add a shade to them
+                color: Colors.red.shade300,
               ),
               Container(
                 height: 100,
                 width: 100,
-                color: Colors.yellow[200],// another way to add shades to the material colors
-              )
-            ],
+                color: Colors.yellow[200],
+              )],
           ),
         ),
       )
