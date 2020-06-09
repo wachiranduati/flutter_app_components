@@ -10,6 +10,10 @@ class HomeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Flutter app components',
+      theme: ThemeData(
+        primaryColor: Colors.lightGreenAccent // create theme colours
+      ),
       home: Scaffold(
         body: SafeArea(
           child: Column(
@@ -17,7 +21,7 @@ class HomeApp extends StatelessWidget {
               Container(
                 height: 100,
                 width: 100,
-                color: Colors.teal,
+                color: Theme.of(context).primaryColor, // use theme colours all over the app
               ),
               Container(
                 height: 100,
