@@ -11,7 +11,7 @@ class HomeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: SafeArea(// navigate to the lib folder in ...> flutter_app_components/lib/products.dart
+        body: SafeArea(
           child: Column(
             children: <Widget>[
               Container(
@@ -24,20 +24,22 @@ class HomeApp extends StatelessWidget {
                 width: 100,
                 color: Colors.red.shade300,
               ),
-              GestureDetector( // adding gestures to a widget
-                onTap: (){ // ontap is just one of the many gestures
-                  print('thing tapped');
-                },
-                onDoubleTap: (){ // note that an anonymous function is passed to the gesture
-                  print('double tapped'); // you can also print out statements..to view them open the run tab
-                  // also remember to add ; semicolon to the end of every line of code
-                },
-                child: Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.yellow[500],
-                ),
+                //Navigate to the pubsec.yaml file...its been commented out..go over the asset and images import section
+              Image(image: AssetImage('images/speech.png'),
+              height: 100,
+              width: 100,),
+              //Navigate to the pubsec.yaml file...its been commented out..go over the asset and images import section
+
+              Image(image: NetworkImage('https://www.nsinsurance.com/wp-content/uploads/sites/9/2019/08/hippo-3647749_1280.jpg'),
+              height: 100,// you can also load an image directly from the internet
+              width: 100,),
+              Container(
+                height: 100,
+                width: 100,
+                child: Image.asset('images/girl.jpg', height: 100, width: 100,), // yet another way to load an asset image..others include Image.network..Image.file
+                color: Colors.black,// currently its nested as a single child in the container widget
               ),
+
 
             ],
           ),
